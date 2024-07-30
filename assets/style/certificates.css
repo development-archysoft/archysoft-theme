@@ -1,0 +1,40 @@
+/* sert */
+.sertificates .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sertificates .services_title {
+  margin-bottom: 45px;
+}
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.slide_img {
+  width: max-content;
+  height: max-content;
+  aspect-ratio: auto;
+  filter: grayscale(1);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+.slide_img:hover {
+  transition: 0.4s ease;
+  filter: none;
+}
+@media screen and (max-width: 992px) {
+  .sertificates .services_title {
+    margin-bottom: 30px;
+  }
+  .slide_img {
+    cursor: initial;
+    width: 100%;
+  }
+}

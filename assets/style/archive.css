@@ -1,0 +1,319 @@
+.archive_post {
+  width: 100%;
+  padding: 50px 0 150px 0;
+  margin-top: 87px;
+}
+.archive_post__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.archive_post__wrapper h1 {
+  font-size: calc(24px + 22 * ((100vw - 320px) / (1920 - 320)));
+  line-height: 150%;
+  color: #211f20;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.page-template-archive-case h2 {
+  font-size: 22px;
+}
+.page-template-archive-case .archive_post__container {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.archive_case .archive_post__bl {
+  gap: 15px;
+}
+.page-template-archive-case .archive_post__wrapper .banner_posts__img {
+  width: max-content;
+  max-width: 400px;
+  height: max-content;
+  aspect-ratio: 500 / 390;
+}
+.archive_post__wrapper .banner_posts__img {
+  width: max-content;
+  max-width: 400px;
+  height: max-content;
+  aspect-ratio: 400 / 248;
+}
+.post_left {
+  width: 100%;
+  max-width: 810px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.archive_post__container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+}
+.archive_post__item .archive_item_img {
+  max-width: 350px;
+  height: max-content;
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.archive_post__item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.cat_arch {
+  color: #c21b24;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  line-height: 130%;
+}
+.arch_cat_wrapper,
+.arch_tag_wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.arch_tag_wrapper p {
+  font-size: 12px;
+  background-color: #bfc1c51a;
+  color: #818386;
+  padding: 6px 12px 6px 12px;
+  text-decoration: none;
+  transition-duration: 1s;
+  border-radius: 3px;
+}
+.author_img {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 100% 36%;
+}
+.archive_post__bl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.archive_post__bl_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.author_name {
+  color: #211f20;
+  font-weight: 600;
+  line-height: 130%;
+  font-size: 14px;
+  margin: 0;
+}
+.date {
+  color: #7a7a7a;
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: 400;
+  margin: 0;
+}
+.author {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
+}
+.author_prev {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.archive_post__item {
+  padding: 20px;
+  border: 1px solid #e7eaf3;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.archive_post__item:hover {
+  border: 1px solid #818386;
+  transition: 0.4s ease;
+}
+.archive_post .container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.archive_post__case {
+  width: calc((100% / 2) - 50px / 2);
+  flex-direction: column;
+  gap: 0;
+  justify-content: space-between;
+  padding: 10px;
+}
+.post_left.post_left_case {
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 50px 10px;
+  justify-content: space-between;
+  max-width: calc(100% - 450px);
+}
+.archive_case .tag_tem {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.archive_case .author {
+  flex-direction: column;
+  gap: 30px;
+}
+.archive_case .archive_post__bl {
+  height: 100%;
+}
+.archive_case .tag_tem li a:hover {
+  transition-duration: 1s;
+  background-color: #c21b24;
+  color: #ffffff;
+}
+.archive_case .archive_item_img {
+  max-width: 370px;
+}
+.archive_case .tag_tem li a {
+  font-size: 12px;
+  background-color: #bfc1c51a;
+  color: #818386;
+  padding: 6px 12px 6px 12px;
+  text-decoration: none;
+  transition-duration: 1s;
+  border-radius: 3px;
+}
+.archive_case .archive_post__case {
+  width: calc((100% / 2) - 15px / 2);
+  justify-content: flex-start;
+}
+.archive_post__container {
+  align-items: flex-start;
+}
+.archive_case .archive_item_img {
+  object-position: top;
+  aspect-ratio: initial;
+  max-width: 370px;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.archive_item_img.archive_vacs_img {
+  object-fit: contain;
+}
+@media screen and (max-width: 1200px) {
+  .archive_case .post_left.post_left_case {
+    max-width: calc(100% - 300px);
+  }
+}
+@media screen and (max-width: 1100px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .archive_case .archive_item_img {
+    max-height: 275px;
+  }
+  .archive_case .archive_item_img {
+    max-width: 100%;
+  }
+  .archive_case .post_left.post_left_case {
+    max-width: 100%;
+  }
+  .archive_post__container {
+    flex-direction: column;
+  }
+  .post_left {
+    max-width: 100%;
+  }
+  .archive_post__item {
+    cursor: initial;
+  }
+  .banner_posts__img {
+    display: none;
+  }
+  .archive_post .container {
+    gap: 30px;
+  }
+  .archive_post {
+    padding: 50px 0 100px 0;
+  }
+  .archive_post .serach_wrapper.mobile {
+    margin: 0;
+  }
+  .archive_post__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px;
+  }
+  .archive_post__container {
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .archive_post__item .archive_item_img {
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: initial;
+  }
+  .archive_post__item {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .archive_post__item .archive_item_img {
+    max-width: 100%;
+  }
+  .archive_post__bl {
+    padding: 0;
+    gap: 15px;
+  }
+  .archive_post__bl_wrap {
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .archive_case .archive_post__case {
+    width: 100%;
+  }
+  .post_left.post_left_case {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .archive_post {
+    padding: 50px 0 50px 0;
+  }
+  .archive_post__item {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  h2 {
+    font-size: 18px;
+  }
+  .archive_post .container {
+    gap: 20px;
+  }
+}
