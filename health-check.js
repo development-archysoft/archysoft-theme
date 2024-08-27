@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/health-check', (req, res) => {
-    const isHealthy = true; // Ваша логика проверки состояния
+    const isHealthy = true;
 
     if (isHealthy) {
         res.status(200).json({ status: 'healthy' });
