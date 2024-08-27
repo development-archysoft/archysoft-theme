@@ -18,17 +18,17 @@ class WordPressTest(unittest.TestCase):
     def test_home_page(self):
         driver = self.driver
         driver.get("http://stage.archysoft.com.ua")
-        self.assertIn("Stage", driver.title)  # Обновите здесь ожидаемый заголовок
+        self.assertIn("Stage", driver.title)
 
     def test_login(self):
         driver = self.driver
         driver.get("http://stage.archysoft.com.ua/wp-login.php")
         elem = driver.find_element(By.NAME, "log")
-        elem.send_keys("admin")  # Замените на ваше имя пользователя
+        elem.send_keys("admin")
         elem = driver.find_element(By.NAME, "pwd")
-        elem.send_keys("z9EkDYv792")  # Замените на ваш пароль
+        elem.send_keys("z9EkDYv792")
         elem.send_keys(Keys.RETURN)
-        self.assertIn("Консоль", driver.title)  # Обновите здесь ожидаемый заголовок
+        self.assertIn("Консоль", driver.title)
 
     def tearDown(self):
         self.driver.quit()
