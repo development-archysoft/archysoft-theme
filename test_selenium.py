@@ -24,11 +24,11 @@ class WordPressTest(unittest.TestCase):
         driver = self.driver
         driver.get("http://stage.archysoft.com/wp-login.php")
         elem = driver.find_element(By.NAME, "log")
-        elem.send_keys("admin")
+        elem.send_keys("Elena")
         elem = driver.find_element(By.NAME, "pwd")
-        elem.send_keys("z9EkDYv792")
+        elem.send_keys("6AQ243IVfugMIcMP(*$3%liW")
         elem.send_keys(Keys.RETURN)
-        self.assertIn("Консоль", driver.title)
+        self.assertIn("Dashboard", driver.title)
 
     def tearDown(self):
         self.driver.quit()
