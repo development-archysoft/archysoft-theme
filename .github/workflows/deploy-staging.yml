@@ -79,8 +79,8 @@ jobs:
 
       - name: Post-Deployment Monitoring
         run: |
-          sleep 30  # Подождать, пока сервисы поднимутся
-          curl -X GET https://stage.archysoft.com.ua/health-check
+          sleep 30
+          curl -X GET https://stage.archysoft.com/health-check
         continue-on-error: true
 
       - name: Check Monitoring Status

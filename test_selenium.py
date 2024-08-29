@@ -17,12 +17,12 @@ class WordPressTest(unittest.TestCase):
 
     def test_home_page(self):
         driver = self.driver
-        driver.get("http://stage.archysoft.com.ua")
+        driver.get("http://stage.archysoft.com")
         self.assertIn("Stage", driver.title)
 
     def test_login(self):
         driver = self.driver
-        driver.get("http://stage.archysoft.com.ua/wp-login.php")
+        driver.get("http://stage.archysoft.com/wp-login.php")
         elem = driver.find_element(By.NAME, "log")
         elem.send_keys("admin")
         elem = driver.find_element(By.NAME, "pwd")
