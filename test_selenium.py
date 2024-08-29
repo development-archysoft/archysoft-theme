@@ -26,7 +26,7 @@ class WordPressTest(unittest.TestCase):
         elem = driver.find_element(By.NAME, "log")
         elem.send_keys("Elena")
         elem = driver.find_element(By.NAME, "pwd")
-        elem.send_keys("6AQ243IVfugMIcMP(*$3%liW")
+        elem.send_keys("6AQ243IVfugMIcMP(*$3")
         elem.send_keys(Keys.RETURN)
         self.assertIn("Dashboard", driver.title)
 
