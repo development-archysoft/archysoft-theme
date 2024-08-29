@@ -277,13 +277,3 @@ class comment_walker extends Walker_Comment
 		$args['order'] = 'DESC';
 		return $args;
 	}
-function temporarily_disable_site() {
-    if (!is_user_logged_in()) {
-        wp_die(
-            '<h1>Сайт временно недоступен</h1><p>Мы работаем над улучшением сайта. Пожалуйста, зайдите позже.</p>',
-            'Сайт на обслуживании',
-            array('response' => 503)
-        );
-    }
-}
-add_action('template_redirect', 'temporarily_disable_site');
