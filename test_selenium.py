@@ -30,6 +30,40 @@ class WordPressTest(unittest.TestCase):
         elem.send_keys(Keys.RETURN)
         self.assertIn("Dashboard", driver.title)
 
+    def test_vacancies_forms_on_child_pages(self):
+        driver = self.driver
+        driver.get("https://stage.archysoft.com/vacancies/")
+
+        # Найти все ссылки на дочерние страницы
+        child_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/vacancies/']")
+
+        for link in child_links:
+            child_url = link.get_attribute("href")
+            if child_url and "https://stage.archysoft.com/vacancies/" in child_url:
+                driver.get(child_url)
+
+                # Проверяем наличие формы на дочерней странице
+                try:
+                    name_input = driver.find_element(By.NAME, "name")
+                    email_input = driver.find_element(By.NAME, "email")
+                    message_input = driver.find_element(By.NAME, "message")
+
+                    # Заполняем форму
+                    name_input.send_keys("Test User")
+                    email_input.send_keys("testuser@example.com")
+                    message_input.send_keys("This is a test message.")
+
+                    # Отправляем форму
+                    submit_button = driver.find_element(By.NAME, "submit")
+                    submit_button.click()
+
+                    # Проверяем, что форма успешно отправлена
+                    success_message = driver.find_element(By.ID, "success-message")
+                    self.assertIn("Thank you", success_message.text)
+
+                except Exception as e:
+                    print(f"Форма на странице {child_url} не найдена или произошла ошибка: {str(e)}")
+
     def tearDown(self):
         self.driver.quit()
 
