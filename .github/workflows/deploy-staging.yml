@@ -68,7 +68,7 @@ jobs:
         env:
           USER: ${{ secrets.STAGING_USER }}
           SERVER: ${{ secrets.STAGING_SERVER }}
-          REMOTE_DIR: /home/ma506709/archysoft.com.ua/stage/wp-content/themes/archysoft
+          REMOTE_DIR: /home/ma506709/archysoft.com/stage/wp-content/themes/archysoft
         run: |
           lftp -e "
             set sftp:connect-program 'ssh -a -x -i private_key';
@@ -80,19 +80,19 @@ jobs:
       - name: Post-Deployment Monitoring
         run: |
           sleep 30  # Подождать, пока сервисы поднимутся
-          curl -X GET http://stage.archysoft.com.ua/health-check
+          curl -X GET https://stage.archysoft.com.ua/health-check
         continue-on-error: true
 
       - name: Check Monitoring Status
         id: check_status
-        run: echo "status=$(curl -s http://stage.archysoft.com.ua/health-check | jq .status)" >> $GITHUB_ENV
+        run: echo "status=$(curl -s https://stage.archysoft.com/health-check | jq .status)" >> $GITHUB_ENV
 
       - name: Rollback if Monitoring Fails
         if: ${{ env.status != 'healthy' }}
         env:
           USER: ${{ secrets.STAGING_USER }}
           SERVER: ${{ secrets.STAGING_SERVER }}
-          REMOTE_DIR: /home/ma506709/archysoft.com.ua/stage/wp-content/themes/archysoft
+          REMOTE_DIR: /home/ma506709/archysoft.com/stage/wp-content/themes/archysoft
         run: |
           lftp -e "
             set sftp:connect-program 'ssh -a -x -i private_key';
