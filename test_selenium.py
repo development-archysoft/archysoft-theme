@@ -18,7 +18,7 @@ class WordPressTest(unittest.TestCase):
     def test_home_page(self):
         driver = self.driver
         driver.get("http://stage.archysoft.com")
-        self.assertIn("Stage", driver.title)
+        self.assertIn("Low-Code/No-Code Development Services", driver.title)
 
     def test_login(self):
         driver = self.driver
