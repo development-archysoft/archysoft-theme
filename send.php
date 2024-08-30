@@ -62,8 +62,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form_id'] === 'leave_resume_
         );
 
         // Відправлення електронного листа з прикріпленим файлом
+//        if (wp_mail($to, $subject, $message, $headers, $attachments)) {
+//            // Виходимо з файлу після відправлення
         if (wp_mail($to, $subject, $message, $headers, $attachments)) {
-            // Виходимо з файлу після відправлення
+            // Письмо с подтверждением кандидату
+            $applicant_email = $_POST['email'];
+            $confirmation_subject = "Natalia from Archysoft";
+            $confirmation_message = "Thank you for your interest in our vacancy and for applying for the position at Archysoft. We will carefully review your resume. If your experience and qualifications meet the requirements of the position, we will contact you within 5-7 business days to discuss the next steps.\n\n Should you have any questions, please do not hesitate to reach out to us at nataliia.zozulynska@archysoft.com.\n\n We wish you the best of luck!";
+
+            // Отправка письма-подтверждения кандидату
+            wp_mail($applicant_email, $confirmation_subject, $confirmation_message);
+
             exit;
         }
     }
