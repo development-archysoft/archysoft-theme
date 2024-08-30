@@ -17,28 +17,28 @@ class WordPressTest(unittest.TestCase):
 
     def test_home_page(self):
         driver = self.driver
-        driver.get("https://stage.archysoft.com")
+        driver.get("https://www.archysoft.com")
         self.assertIn("Low-Code/No-Code Development Services", driver.title)
 
     def test_login(self):
         driver = self.driver
-        driver.get("https://stage.archysoft.com/wp-login.php")
+        driver.get("https://www.archysoft.com/wp-login.php")
         elem = driver.find_element(By.NAME, "log")
         elem.send_keys("Elena")
         elem = driver.find_element(By.NAME, "pwd")
-        elem.send_keys("6AQ243IVfugMIcMP(*$3")
+        elem.send_keys("F2s28OsW6t67N5PUWw4NOI")
         elem.send_keys(Keys.RETURN)
         self.assertIn("Dashboard", driver.title)
 
     def test_vacancies_forms_on_child_pages(self):
         driver = self.driver
-        driver.get("https://stage.archysoft.com/vacancies/")
+        driver.get("https://www.archysoft.com/vacancies/")
 
         child_links = driver.find_elements(By.CSS_SELECTOR, "a[href*='/vacancies/']")
 
         for link in child_links:
             child_url = link.get_attribute("href")
-            if child_url and "https://stage.archysoft.com/vacancies/" in child_url:
+            if child_url and "https://www.archysoft.com/vacancies/" in child_url:
                 driver.get(child_url)
 
                 try:
