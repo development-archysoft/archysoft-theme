@@ -25,7 +25,7 @@ if (wp_mail($to, $subject, $message, $headers)) {
 }
 }
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form_id'] === 'leave_resume_form') {
-    $to = 'hr@archysoft.com';
+    $to = 'nataliia.zozulynska@archysoft.com';
     $subject = 'Resume Submission';
 
     // Перевірка, чи був завантажений файл
